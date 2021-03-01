@@ -6,16 +6,6 @@ const addData = (req, res, db) => {
         id: id,
         text: text,
     }).then(console.log)
-
-    // db.transaction(trx => {
-    //     trx.insert({
-    //         id: id,
-    //         text: text,
-    //     })
-    //     .into('items')
-    //     .returning('text')
-    //     .then()
-    // })
 }
 
 module.exports = {

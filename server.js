@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 
 const { getData } = require('./controllers/getData');
 const { addData } = require('./controllers/addData');
+const { deleteData } = require('./controllers/deleteData');
 
 // =======================================
 // Endpoints //
@@ -30,6 +31,7 @@ const { addData } = require('./controllers/addData');
 
 app.get('/', (req, res) => getData(req, res, db));
 app.post('/', (req, res) => addData(req, res, db));
+app.delete('/', (req, res) => deleteData(req, res, db));
 
 // =======================================
 
