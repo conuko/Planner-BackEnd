@@ -24,6 +24,7 @@ app.use(bodyParser.json());
 const { getData } = require('./controllers/getData');
 const { addData } = require('./controllers/addData');
 const { deleteData } = require('./controllers/deleteData');
+const { updateData } = require('./controllers/updateData');
 
 // =======================================
 // Endpoints //
@@ -32,6 +33,7 @@ const { deleteData } = require('./controllers/deleteData');
 app.get('/', (req, res) => getData(req, res, db));
 app.post('/', (req, res) => addData(req, res, db));
 app.delete('/', (req, res) => deleteData(req, res, db));
+app.put('/', (req, res) => updateData(req, res, db));
 
 // =======================================
 
